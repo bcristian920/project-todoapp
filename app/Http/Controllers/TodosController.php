@@ -26,7 +26,8 @@ class todosController extends Controller
             $todo->name=$request['name'];
             $todo->work=$request['work'];
             $todo->duedate=$request['duedate'];
-            $todo->save();
+            $todo->status=$request['status'];
+             $todo->save();
             return redirect(route("todo.home"));
         }
     
@@ -54,6 +55,7 @@ class todosController extends Controller
             $todo->name=$request['name'];
             $todo->work=$request['work'];
             $todo->duedate=$request['duedate'];
+            $todo->status=$request['status'];
             $todo->save();
             return redirect(route("todo.home"));
     }
